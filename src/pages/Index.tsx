@@ -28,6 +28,12 @@ const MENU: MenuItem[] = [
   { id: 2, name: "Аджапсандали", description: "Рагу из баклажанов, перца, помидоров и зелени", price: 380, weight: "300г", emoji: "🫑", category: "Закуски" },
   { id: 3, name: "Пхали ассорти", description: "Закуски из шпината, свёклы и грецких орехов", price: 320, weight: "240г", emoji: "🌿", category: "Закуски", popular: true },
   { id: 4, name: "Сулугуни жареный", description: "Сыр сулугуни в хрустящей корочке с зеленью", price: 350, weight: "200г", emoji: "🧀", category: "Закуски" },
+  { id: 50, name: "Рулетики из баклажан", description: "Тонкие ломтики баклажана с ореховой начинкой и чесноком", price: 340, weight: "220г", emoji: "🍆", category: "Закуски", popular: true },
+  { id: 51, name: "Сырная тарелка", description: "Ассорти из сулугуни, брынзы и козьего сыра с мёдом и орехами", price: 490, weight: "300г", emoji: "🧀", category: "Закуски" },
+  { id: 52, name: "Овощная нарезка", description: "Свежие сезонные овощи с зеленью и оливковым маслом", price: 280, weight: "350г", emoji: "🥒", category: "Закуски" },
+  { id: 53, name: "Ассорти домашних солений", description: "Маринованные огурцы, помидоры, капуста и перец по-домашнему", price: 310, weight: "300г", emoji: "🥬", category: "Закуски" },
+  { id: 54, name: "Наггетсы", description: "Куриные наггетсы в хрустящей панировке с соусом на выбор", price: 360, weight: "250г", emoji: "🍗", category: "Закуски" },
+  { id: 55, name: "Сырные палочки", description: "Хрустящие палочки из сулугуни с томатным соусом", price: 320, weight: "200г", emoji: "🧀", category: "Закуски" },
   // Салаты
   { id: 5, name: "Салат из помидоров", description: "Свежие помидоры, огурцы, красный лук, кинза и оливковое масло", price: 290, weight: "250г", emoji: "🥗", category: "Салаты" },
   { id: 6, name: "Грузинский салат", description: "Овощи с грецкими орехами, чесноком и кавказскими специями", price: 320, weight: "280г", emoji: "🥙", category: "Салаты", popular: true },
