@@ -293,8 +293,9 @@ const Index = () => {
       </section>
 
       {/* MENU */}
-      <section id="menu" className="py-20 bg-caucasus-cream caucasus-pattern">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="menu" className="py-20 relative" style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/dbd6f638-3bd6-4517-aeab-3790fe9cf8fa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+        <div className="absolute inset-0 bg-caucasus-cream/90" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-caucasus-gold font-semibold tracking-widest text-sm uppercase mb-2">Наше меню</p>
             <h2 className="font-cormorant text-5xl font-bold text-caucasus-dark mb-4">Традиционные блюда Кавказа</h2>
