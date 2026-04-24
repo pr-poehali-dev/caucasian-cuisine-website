@@ -19,10 +19,11 @@ interface MenuItem {
   emoji: string;
   category: string;
   popular?: boolean;
+  image?: string;
 }
 
 const MENU: MenuItem[] = [
-  { id: 1, name: "Шашлык из баранины", description: "Нежная баранина, маринованная в специях и луке, на живом огне", price: 890, weight: "350г", emoji: "🍖", category: "Мангал", popular: true },
+  { id: 1, name: "Шашлык из баранины", description: "Нежная баранина, маринованная в специях и луке, на живом огне", price: 890, weight: "350г", emoji: "🍖", category: "Мангал", popular: true, image: "https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/3e8e9b92-1094-4d04-9487-27c661b30dfc.jpg" },
   { id: 2, name: "Шашлык из говядины", description: "Вырезка из молодой говядины с травами Кавказа", price: 750, weight: "350г", emoji: "🥩", category: "Мангал" },
   { id: 3, name: "Люля-кебаб", description: "Рубленое мясо с луком и специями на шампуре", price: 620, weight: "300г", emoji: "🍢", category: "Мангал", popular: true },
   { id: 4, name: "Хачапури по-аджарски", description: "Лодочка из теста с сыром сулугуни, яйцом и маслом", price: 480, weight: "400г", emoji: "🫓", category: "Хлеб и выпечка", popular: true },
@@ -317,8 +318,11 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filteredMenu.map((item) => (
               <div key={item.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-caucasus-sand/50 group">
-                <div className="h-40 bg-gradient-to-br from-caucasus-sand to-caucasus-cream flex items-center justify-center relative">
-                  <span className="text-6xl group-hover:scale-110 transition-transform">{item.emoji}</span>
+                <div className="h-40 bg-gradient-to-br from-caucasus-sand to-caucasus-cream flex items-center justify-center relative overflow-hidden">
+                  {item.image
+                    ? <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    : <span className="text-6xl group-hover:scale-110 transition-transform">{item.emoji}</span>
+                  }
                   {item.popular && (
                     <span className="absolute top-3 left-3 bg-caucasus-gold text-caucasus-dark text-xs font-bold px-2 py-0.5 rounded-full">⭐ Популярное</span>
                   )}
