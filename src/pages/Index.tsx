@@ -23,23 +23,68 @@ interface MenuItem {
 }
 
 const MENU: MenuItem[] = [
-  { id: 1, name: "Шашлык из баранины", description: "Нежная баранина, маринованная в специях и луке, на живом огне", price: 890, weight: "350г", emoji: "🍖", category: "Мангал", popular: true, image: "https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/3e8e9b92-1094-4d04-9487-27c661b30dfc.jpg" },
-  { id: 2, name: "Шашлык из говядины", description: "Вырезка из молодой говядины с травами Кавказа", price: 750, weight: "350г", emoji: "🥩", category: "Мангал" },
-  { id: 3, name: "Люля-кебаб", description: "Рубленое мясо с луком и специями на шампуре", price: 620, weight: "300г", emoji: "🍢", category: "Мангал", popular: true },
-  { id: 4, name: "Хачапури по-аджарски", description: "Лодочка из теста с сыром сулугуни, яйцом и маслом", price: 480, weight: "400г", emoji: "🫓", category: "Хлеб и выпечка", popular: true },
-  { id: 5, name: "Хачапури по-имеретински", description: "Закрытый пирог с сыром, запечённый в дровяной печи", price: 420, weight: "380г", emoji: "🥮", category: "Хлеб и выпечка" },
-  { id: 6, name: "Хинкали", description: "Сочные грузинские пельмени с бульоном внутри, 6 штук", price: 390, weight: "360г", emoji: "🥟", category: "Хинкали", popular: true },
-  { id: 7, name: "Хинкали с грибами", description: "Вегетарианские хинкали с лесными грибами и зеленью", price: 350, weight: "360г", emoji: "🍄", category: "Хинкали" },
-  { id: 8, name: "Долма", description: "Виноградные листья с рисом и мясом в томатном соусе", price: 420, weight: "280г", emoji: "🫙", category: "Закуски" },
-  { id: 9, name: "Аджапсандали", description: "Рагу из баклажанов, перца, помидоров и зелени", price: 380, weight: "300г", emoji: "🫑", category: "Закуски" },
-  { id: 10, name: "Пхали", description: "Ассорти закусок из шпината, свёклы и грецких орехов", price: 320, weight: "240г", emoji: "🌿", category: "Закуски" },
-  { id: 11, name: "Харчо", description: "Острый суп из говядины с рисом, томатами и кинзой", price: 340, weight: "350мл", emoji: "🍲", category: "Супы", popular: true },
-  { id: 12, name: "Чихиртма", description: "Традиционный грузинский куриный суп с яйцом", price: 290, weight: "350мл", emoji: "🍵", category: "Супы" },
-  { id: 13, name: "Баклава", description: "Слоёное медовое пирожное с грецкими орехами", price: 220, weight: "150г", emoji: "🍯", category: "Десерты" },
-  { id: 14, name: "Чурчхела", description: "Грузинская сладость из виноградного сока с орехами", price: 180, weight: "100г", emoji: "🍬", category: "Десерты" },
+  // Закуски
+  { id: 1, name: "Долма", description: "Виноградные листья с рисом и мясом в томатном соусе", price: 420, weight: "280г", emoji: "🫙", category: "Закуски" },
+  { id: 2, name: "Аджапсандали", description: "Рагу из баклажанов, перца, помидоров и зелени", price: 380, weight: "300г", emoji: "🫑", category: "Закуски" },
+  { id: 3, name: "Пхали ассорти", description: "Закуски из шпината, свёклы и грецких орехов", price: 320, weight: "240г", emoji: "🌿", category: "Закуски", popular: true },
+  { id: 4, name: "Сулугуни жареный", description: "Сыр сулугуни в хрустящей корочке с зеленью", price: 350, weight: "200г", emoji: "🧀", category: "Закуски" },
+  // Салаты
+  { id: 5, name: "Салат из помидоров", description: "Свежие помидоры, огурцы, красный лук, кинза и оливковое масло", price: 290, weight: "250г", emoji: "🥗", category: "Салаты" },
+  { id: 6, name: "Грузинский салат", description: "Овощи с грецкими орехами, чесноком и кавказскими специями", price: 320, weight: "280г", emoji: "🥙", category: "Салаты", popular: true },
+  { id: 7, name: "Салат с курицей", description: "Куриная грудка гриль, руккола, помидоры черри, сыр фета", price: 380, weight: "300г", emoji: "🐓", category: "Салаты" },
+  // Первые блюда
+  { id: 8, name: "Харчо", description: "Острый суп из говядины с рисом, томатами и кинзой", price: 340, weight: "350мл", emoji: "🍲", category: "Первые блюда", popular: true },
+  { id: 9, name: "Чихиртма", description: "Традиционный грузинский куриный суп с яйцом", price: 290, weight: "350мл", emoji: "🍵", category: "Первые блюда" },
+  { id: 10, name: "Шурпа", description: "Наваристый суп из баранины с овощами и специями", price: 360, weight: "400мл", emoji: "🥘", category: "Первые блюда" },
+  { id: 11, name: "Бозбаш", description: "Азербайджанский суп из ягнятины с нутом и каштанами", price: 380, weight: "400мл", emoji: "🍜", category: "Первые блюда" },
+  // Вторые блюда
+  { id: 12, name: "Чахохбили", description: "Тушёная курица в томатном соусе с зеленью и специями", price: 520, weight: "380г", emoji: "🍗", category: "Вторые блюда", popular: true },
+  { id: 13, name: "Сациви", description: "Курица в ореховом соусе с пряностями", price: 540, weight: "350г", emoji: "🐤", category: "Вторые блюда" },
+  { id: 14, name: "Хинкали", description: "Сочные грузинские пельмени с бульоном внутри, 6 штук", price: 390, weight: "360г", emoji: "🥟", category: "Вторые блюда", popular: true },
+  { id: 15, name: "Хинкали с грибами", description: "Вегетарианские хинкали с лесными грибами и зеленью", price: 350, weight: "360г", emoji: "🍄", category: "Вторые блюда" },
+  // Мангал
+  { id: 16, name: "Шашлык из баранины", description: "Нежная баранина, маринованная в специях и луке, на живом огне", price: 890, weight: "350г", emoji: "🍖", category: "Мангал", popular: true, image: "https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/3e8e9b92-1094-4d04-9487-27c661b30dfc.jpg" },
+  { id: 17, name: "Шашлык из говядины", description: "Вырезка из молодой говядины с травами Кавказа", price: 750, weight: "350г", emoji: "🥩", category: "Мангал" },
+  { id: 18, name: "Люля-кебаб", description: "Рубленое мясо с луком и специями на шампуре", price: 620, weight: "300г", emoji: "🍢", category: "Мангал", popular: true },
+  { id: 19, name: "Шашлык из курицы", description: "Куриное филе в маринаде из йогурта и специй", price: 550, weight: "350г", emoji: "🐔", category: "Мангал" },
+  { id: 20, name: "Овощи на мангале", description: "Баклажаны, перец, помидоры, цукини на живом огне", price: 380, weight: "300г", emoji: "🥦", category: "Мангал" },
+  // Выпечка
+  { id: 21, name: "Хачапури по-аджарски", description: "Лодочка из теста с сыром сулугуни, яйцом и маслом", price: 480, weight: "400г", emoji: "🫓", category: "Выпечка", popular: true },
+  { id: 22, name: "Хачапури по-имеретински", description: "Закрытый пирог с сыром, запечённый в дровяной печи", price: 420, weight: "380г", emoji: "🥮", category: "Выпечка" },
+  { id: 23, name: "Лаваш", description: "Тонкий армянский хлеб, выпеченный в тандыре", price: 80, weight: "150г", emoji: "🫓", category: "Выпечка" },
+  { id: 24, name: "Мчади", description: "Грузинские кукурузные лепёшки хрустящие снаружи", price: 120, weight: "180г", emoji: "🌽", category: "Выпечка" },
+  // Гарниры
+  { id: 25, name: "Рис с зеленью", description: "Рассыпчатый рис с кинзой, укропом и петрушкой", price: 180, weight: "200г", emoji: "🍚", category: "Гарниры" },
+  { id: 26, name: "Картофель по-домашнему", description: "Жареный картофель с луком, чесноком и зеленью", price: 200, weight: "250г", emoji: "🥔", category: "Гарниры" },
+  { id: 27, name: "Овощи гриль", description: "Сезонные овощи, приготовленные на гриле с травами", price: 220, weight: "220г", emoji: "🥕", category: "Гарниры" },
+  // Соусы
+  { id: 28, name: "Ткемали", description: "Грузинский соус из кислой сливы с чесноком и кинзой", price: 90, weight: "100г", emoji: "🍑", category: "Соусы" },
+  { id: 29, name: "Аджика", description: "Острая кавказская приправа с перцем и пряными травами", price: 90, weight: "100г", emoji: "🌶️", category: "Соусы" },
+  { id: 30, name: "Сацебели", description: "Томатно-ореховый соус с чесноком и кориандром", price: 90, weight: "100г", emoji: "🍅", category: "Соусы" },
+  { id: 31, name: "Нашараби", description: "Гранатовый соус с пряностями", price: 110, weight: "100г", emoji: "🍷", category: "Соусы" },
+  // Десерты
+  { id: 32, name: "Баклава", description: "Слоёное медовое пирожное с грецкими орехами", price: 220, weight: "150г", emoji: "🍯", category: "Десерты", popular: true },
+  { id: 33, name: "Чурчхела", description: "Грузинская сладость из виноградного сока с орехами", price: 180, weight: "100г", emoji: "🍬", category: "Десерты" },
+  { id: 34, name: "Пахлава", description: "Армянская сладость из слоёного теста с мёдом и орехами", price: 240, weight: "160г", emoji: "🧁", category: "Десерты" },
+  { id: 35, name: "Мороженое с инжиром", description: "Домашнее мороженое с карамелизированным инжиром", price: 260, weight: "180г", emoji: "🍨", category: "Десерты" },
+  // Напитки
+  { id: 36, name: "Домашний лимонад", description: "Свежий лимонад с мятой и лимоном на газированной воде", price: 180, weight: "400мл", emoji: "🍋", category: "Лимонады", popular: true },
+  { id: 37, name: "Лимонад с тархуном", description: "Освежающий лимонад с экстрактом тархуна", price: 190, weight: "400мл", emoji: "🌱", category: "Лимонады" },
+  { id: 38, name: "Лимонад с гранатом", description: "Кисло-сладкий лимонад с гранатовым соком и мятой", price: 200, weight: "400мл", emoji: "❤️", category: "Лимонады" },
+  { id: 39, name: "Клубничный фреш", description: "Свежевыжатый клубничный сок с сахарным сиропом", price: 220, weight: "300мл", emoji: "🍓", category: "Фреши" },
+  { id: 40, name: "Апельсиновый фреш", description: "Свежевыжатый апельсиновый сок", price: 200, weight: "300мл", emoji: "🍊", category: "Фреши" },
+  { id: 41, name: "Гранатовый фреш", description: "Свежевыжатый гранатовый сок — источник антиоксидантов", price: 260, weight: "300мл", emoji: "🍹", category: "Фреши", popular: true },
+  { id: 42, name: "Клубничный милкшейк", description: "Нежный молочный коктейль с клубникой и мороженым", price: 280, weight: "400мл", emoji: "🥤", category: "Милкшейки" },
+  { id: 43, name: "Ванильный милкшейк", description: "Классический молочный коктейль с ванильным мороженым", price: 260, weight: "400мл", emoji: "🍦", category: "Милкшейки" },
+  { id: 44, name: "Шоколадный милкшейк", description: "Насыщенный коктейль с шоколадным мороженым и какао", price: 290, weight: "400мл", emoji: "🍫", category: "Милкшейки" },
+  { id: 45, name: "Эспрессо", description: "Крепкий итальянский кофе из отборных зёрен арабики", price: 120, weight: "60мл", emoji: "☕", category: "Кофе и чай" },
+  { id: 46, name: "Капучино", description: "Эспрессо с нежной молочной пенкой", price: 160, weight: "200мл", emoji: "☕", category: "Кофе и чай", popular: true },
+  { id: 47, name: "Турецкий кофе", description: "Кофе по-восточному, сваренный в джезве на песке", price: 140, weight: "100мл", emoji: "🫖", category: "Кофе и чай" },
+  { id: 48, name: "Чай с чабрецом", description: "Горный чай с чабрецом и мёдом — кавказская традиция", price: 130, weight: "400мл", emoji: "🍵", category: "Кофе и чай", popular: true },
+  { id: 49, name: "Чай с лимоном", description: "Чёрный чай с долькой лимона и мятой", price: 110, weight: "400мл", emoji: "🍋", category: "Кофе и чай" },
 ];
 
-const CATEGORIES = ["Все", "Мангал", "Хлеб и выпечка", "Хинкали", "Закуски", "Супы", "Десерты"];
+const CATEGORIES = ["Все", "Закуски", "Салаты", "Первые блюда", "Вторые блюда", "Мангал", "Выпечка", "Гарниры", "Соусы", "Десерты", "Лимонады", "Фреши", "Милкшейки", "Кофе и чай"];
 
 const REVIEWS = [
   { id: 1, name: "Марина К.", rating: 5, text: "Лучший ресторан в городе! Хачапури по-аджарски просто таят во рту. Атмосфера невероятная, как будто попал в настоящую Грузию.", date: "12 апреля 2026" },
