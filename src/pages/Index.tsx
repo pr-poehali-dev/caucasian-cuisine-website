@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/4d0de269-4790-4b61-a5e3-33ea6d50fc65.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bffc032-5f84-4cc8-b361-07d9cb07480f/files/7611f06c-40b5-4e2f-b89c-74811feb79c0.jpg";
 
 interface CartItem {
   id: number;
